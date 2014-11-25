@@ -53,6 +53,7 @@
      <Compile Include="Assets\Editor\OpenGUI\OGSkinInspector.js" />
      <Compile Include="Assets\Editor\OpenGUI\OGWidgetInspector.js" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\UnlitAlphaColored.shader" />
+     <None Include="Assets\Shaders\AlphaCutoff.shader" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\UnlitVertexColored.shader" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\3DText.shader" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\UnlitClipped.shader" />

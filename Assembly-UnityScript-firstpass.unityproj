@@ -77,6 +77,7 @@
      <Compile Include="Assets\Plugins\OpenGUI\Scripts\OGTween.js" />
      <Compile Include="Assets\Plugins\OpenGUI\Scripts\OGWidget.js" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\UnlitAlphaColored.shader" />
+     <None Include="Assets\Shaders\AlphaCutoff.shader" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\UnlitVertexColored.shader" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\3DText.shader" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\UnlitClipped.shader" />

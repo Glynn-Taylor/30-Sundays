@@ -1,12 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UI\CameraScrollScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shaders\AlphaCutoff.shader">
     <Files>
-      <File FileName="Assets\Scripts\BuildingScript.cs" Line="8" Column="32" />
-      <File FileName="Assets\Scripts\UI\PauseMenuScript.cs" Line="23" Column="15" />
-      <File FileName="Assets\Scripts\UI\MainMenuScript.cs" Line="14" Column="43" />
-      <File FileName="Assets\Scripts\UI\OptionsScript.cs" Line="29" Column="28" />
-      <File FileName="Assets\Scripts\UI\CameraScrollScript.cs" Line="34" Column="1" />
+      <File FileName="Assets\Scripts\Character\GhostScript.cs" Line="18" Column="6" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\MainMenuScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character\PersonScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Shaders\AlphaCutoff.shader" Line="8" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

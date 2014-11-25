@@ -68,11 +68,15 @@
      <Compile Include="Assets\2d-example\Scripts\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\2d-example\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\BuildingScript.cs" />
+     <Compile Include="Assets\Scripts\Character\GhostScript.cs" />
+     <Compile Include="Assets\Scripts\Character\PersonScript.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\UI\CameraScrollScript.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\UI\OptionsScript.cs" />
      <Compile Include="Assets\Scripts\UI\PauseMenuScript.cs" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\UnlitAlphaColored.shader" />
+     <None Include="Assets\Shaders\AlphaCutoff.shader" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\UnlitVertexColored.shader" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\3DText.shader" />
      <None Include="Assets\Plugins\OpenGUI\Shaders\UnlitClipped.shader" />
