@@ -624,6 +624,35 @@ MonoBehaviour:
         m_Bottom: 6
       lineHeight: 1.25
       spacing: 1
+  - name: iconCoin
+    coordinates:
+      serializedVersion: 2
+      x: 192
+      y: 256
+      width: 64
+      height: 64
+    border:
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    text:
+      fontIndex: 0
+      font: {fileID: 0}
+      fontSize: 12
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      shadowSize: 0
+      shadowColor: {r: 0, g: 0, b: 0, a: 1}
+      alignment: 0
+      wordWrap: 1
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      lineHeight: 1.25
+      spacing: 1
   - name: Judgement
     coordinates:
       serializedVersion: 2

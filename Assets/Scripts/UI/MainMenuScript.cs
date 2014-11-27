@@ -12,6 +12,7 @@ public class MainMenuScript : MonoBehaviour {
 	}
 	public void Options(){
 		OGRoot.GetInstance().GoToPage ( "Options" );
+        SoundManager.Instance.Play("soul_damn");
 	}
 	public void MainMenu(){
 		OGRoot.GetInstance().GoToPage ( "MainMenu" );

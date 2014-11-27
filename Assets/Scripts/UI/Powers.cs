@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 public class Powers : MonoBehaviour {
+    
     protected struct Power{
         public string name;
         public string desc;
@@ -32,17 +33,22 @@ public class Powers : MonoBehaviour {
     protected const int PADDING = 5;
     protected const int TABLE_WIDTH=500;
     protected bool Displaying;
-
+    public Powers OtherDisplay;
+    
     protected void Display(Power[] powers){
         if(Displaying){
-            GUI.BeginGroup (new Rect (Screen.width/2-TABLE_WIDTH/2, PADDING, TABLE_WIDTH, Screen.height - PADDING * 2));
+            GUI.BeginGroup (new Rect (Screen.width/2-TABLE_WIDTH/2, Screen.height/2-(powers.Length*60)/2, TABLE_WIDTH, powers.Length*60));
             //Title label
-            GUI.Label (new Rect (Screen.width/2-100, 0, 200, 75), "Powers");
             //Iterate through all level strings and create a button for each that starts a server with that level
             for (int i = 0; i < powers.Length; i++) {
-                if (GUI.Button (new Rect (PADDING, 100 + (110 * i), TABLE_WIDTH - PADDING * 2, 50), powers[i].name+": "+powers[i].desc+" | Cost= "+powers[i].cost.ToString())){
-                    Invoke(powers[i].name.Replace(" ",""),0);
+                if (GUI.Button (new Rect (PADDING, (60 * i), TABLE_WIDTH - PADDING * 2, 50), powers[i].name+": "+powers[i].desc+" | Cost= "+powers[i].cost.ToString())){
+                    
+                    if(powers[i].isGood?GameManager.Instance.getFavor(powers[i].cost):GameManager.Instance.getMight(powers[i].cost)){
+                        Invoke(powers[i].name.Replace(" ",""),0);
+                    }
+                    StopDisplaying();
                     //DEDUCT/CHECK COST
+                    
                 }
             }
             //End of container
@@ -52,6 +58,8 @@ public class Powers : MonoBehaviour {
 
     public void TogglePowers(){
         Displaying=!Displaying;
+        if(OtherDisplay!=null)
+            OtherDisplay.StopDisplaying();
     }
     protected Power[] getEvilPowers(){
         return getAll(false);
@@ -67,7 +75,7 @@ public class Powers : MonoBehaviour {
         }
         return powers.ToArray();
     }
-    public void stopDisplaying(){
+    public void StopDisplaying(){
         Displaying=false;
     }
 }

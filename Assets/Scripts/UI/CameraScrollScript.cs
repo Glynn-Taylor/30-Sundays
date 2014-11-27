@@ -15,9 +15,11 @@ public class CameraScrollScript : MonoBehaviour {
 		if (transform.position.y == UnderworldHeight) {
 			LegacyAnimator.clip = animation.GetClip("CameraUnderworldUp");
 			LegacyAnimator.Play();
+            AmbientManager.Instance.PlayTrack(1);
 		} else if (transform.position.y == 0) {
 			LegacyAnimator.clip = animation.GetClip("CameraWorldUp");
 			LegacyAnimator.Play();
+            AmbientManager.Instance.PlayTrack(0);
 		}
 	}
 	public void ScrollDown(){
@@ -25,9 +27,11 @@ public class CameraScrollScript : MonoBehaviour {
 		if (transform.position.y == OverworldHeight) {
 			LegacyAnimator.clip = animation.GetClip("CameraOverworldDown");
 			LegacyAnimator.Play();
+            AmbientManager.Instance.PlayTrack(1);
 		} else if (transform.position.y == 0) {
 			LegacyAnimator.clip = animation.GetClip("CameraWorldDown");
 			LegacyAnimator.Play();
+            AmbientManager.Instance.PlayTrack(2);
 		}
 	}
 }

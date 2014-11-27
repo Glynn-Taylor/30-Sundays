@@ -43,6 +43,7 @@ public class GhostScript : MonoBehaviour
     private const float TIME_TO_DECAY = 7;
     private float initialY;
     private bool uiEnabled = false;
+    private bool judging=false;
     private Renderer progressBarRenderer;
     private float decayTime=0;
     public List<Event> LifeEvents = new List<Event>();
@@ -75,7 +76,7 @@ public class GhostScript : MonoBehaviour
             {
                 uiEnabled = true;
             }
-        } else {
+        } else if(!judging) {
             decayTime+=Time.deltaTime;
             if(decayTime>TIME_TO_DECAY){
                 Destroy(gameObject);
@@ -90,7 +91,8 @@ public class GhostScript : MonoBehaviour
         if (uiEnabled)
         {
             OGRoot.GetInstance().GoToPage ( "JudgementMenu" );
-            OGRoot.GetInstance().currentPage.gameObject.SendMessage("SetText",this);;
+            OGRoot.GetInstance().currentPage.gameObject.SendMessage("SetText",this);
+            judging=true;
             GameManager.Instance.setGhost(this);
             //Time.timeScale = 0;
         }
@@ -103,5 +105,7 @@ public class GhostScript : MonoBehaviour
         total=total>25?25:(total<-25?-25:total);
         return total;
     }
-
+    public void StopJudging(){
+        judging=false;
+    }
 }
