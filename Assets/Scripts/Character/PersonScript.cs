@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PersonScript : MonoBehaviour {
 
-	private const float TIME_TO_AGE = 0.1f;
+	private const float TIME_TO_AGE = 2f;
 	private Transform frontCheck;		// Reference to the position of the gameobject used for checking if something is in front.
 	private float AgeTimer=0;
 	public float moveSpeed = 2f;		// The speed the enemy moves at.
@@ -21,7 +21,7 @@ public class PersonScript : MonoBehaviour {
 			AgeTimer=0;
 			Age++;
 			if (Age > 16) {
-				if(Random.Range(0,100)<Age/100f)
+                if(Random.value<Age/100f)
 					GameManager.Instance.KillPerson(gameObject);
 			}
 		}

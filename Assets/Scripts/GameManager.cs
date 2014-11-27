@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class GameManager  : MonoBehaviour {
 	//Singleton instance
 	private static GameManager instance;
-	private const float BABY_CHANCE = 6f;
+	private const float BABY_CHANCE = 36f;
 	private List<GameObject> PeopleWorld = new List<GameObject>();
 	private List<GameObject> PeopleUnderworld = new List<GameObject>();
 	private List<GameObject> PeopleOverworld = new List<GameObject>();
