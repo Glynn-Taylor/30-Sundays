@@ -131,6 +131,64 @@ MonoBehaviour:
         m_Bottom: 0
       lineHeight: 1.25
       spacing: 1
+  - name: ButtonEvil
+    coordinates:
+      serializedVersion: 2
+      x: 0
+      y: 300
+      width: 100
+      height: 100
+    border:
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    text:
+      fontIndex: 0
+      font: {fileID: 11400000, guid: 71c50facf23474bf39105e5c98995d4b, type: 2}
+      fontSize: 12
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      shadowSize: 0
+      shadowColor: {r: 0, g: 0, b: 0, a: 1}
+      alignment: 1
+      wordWrap: 1
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      lineHeight: 1.25
+      spacing: 1
+  - name: ButtonGood
+    coordinates:
+      serializedVersion: 2
+      x: 100
+      y: 300
+      width: 100
+      height: 100
+    border:
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    text:
+      fontIndex: 0
+      font: {fileID: 11400000, guid: 71c50facf23474bf39105e5c98995d4b, type: 2}
+      fontSize: 12
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      shadowSize: 0
+      shadowColor: {r: 0, g: 0, b: 0, a: 1}
+      alignment: 1
+      wordWrap: 1
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      lineHeight: 1.25
+      spacing: 1
   - name: ButtonGroupLeft
     coordinates:
       serializedVersion: 2
@@ -564,6 +622,35 @@ MonoBehaviour:
         m_Right: 8
         m_Top: 6
         m_Bottom: 6
+      lineHeight: 1.25
+      spacing: 1
+  - name: Judgement
+    coordinates:
+      serializedVersion: 2
+      x: 256
+      y: 0
+      width: 400
+      height: 400
+    border:
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    text:
+      fontIndex: 0
+      font: {fileID: 0}
+      fontSize: 12
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      shadowSize: 0
+      shadowColor: {r: 0, g: 0, b: 0, a: 1}
+      alignment: 0
+      wordWrap: 1
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
       lineHeight: 1.25
       spacing: 1
   - name: LabelBasic

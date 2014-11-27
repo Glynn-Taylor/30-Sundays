@@ -26,12 +26,16 @@ public class PauseMenuScript : MonoBehaviour {
 	void DisplayMenu (int i) {
 		if(GUILayout.Button("Resume")){
 			isPaused=false;
+            Time.timeScale = 1;
 		}
 		if(GUILayout.Button("Main Menu")){
 			Application.LoadLevel("MainMenu");
+            Time.timeScale = 1;
 		}
 		if(GUILayout.Button("Restart")){
+            Time.timeScale = 1;
 			Application.LoadLevel("Game");
+
 		}
 		if(GUILayout.Button("Quit")){
 			Application.Quit();

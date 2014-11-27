@@ -13,14 +13,29 @@ public class GameManager  : MonoBehaviour {
 	private float WorldPopCap=50;
 	private float OverworldPopCap=50;
 	private float UnderworldPopCap=50;
+    private GhostScript TrackedGhost;
 	public OGLabel PopulationText;
 	public Transform WorldPosition;
+    public Transform[] UnderworldPositions;
+    public Transform OverworldPosition;
 
 	public void Start(){
 		instance = this;
 		PeopleWorld.AddRange (GameObject.FindGameObjectsWithTag ("Person"));
 	}
-
+    public void SendToHell(string s){
+        GameObject go = (GameObject)GameObject.Instantiate(Resources.Load ("damnedsoul"));
+        go.transform.position = UnderworldPositions[Random.Range(0,UnderworldPositions.Length)].position+new Vector3(Random.Range(-2,2),0,0);
+        PeopleUnderworld.Add (go);
+        CleanupGhost(false);
+    }
+    public void SendToHeaven(string s){
+        GameObject go = (GameObject)GameObject.Instantiate(Resources.Load ("blessedsoul"));
+        go.transform.position = OverworldPosition.position+new Vector3(Random.Range(-2,2),0,0);
+        PeopleOverworld.Add (go);
+        CleanupGhost(true);
+    }
+   
 	public void KillPerson(GameObject go){
 		PeopleWorld.Remove (go);
         GameObject.Instantiate(Resources.Load("ghost"),go.transform.position,go.transform.rotation);
@@ -43,6 +58,18 @@ public class GameManager  : MonoBehaviour {
 			SecondTick=0;
 		}
 	}
+    private void CleanupGhost(bool blessed){
+        Destroy(TrackedGhost.gameObject);
+        GameUI();
+    }
+    public void GameUI(){
+        Time.timeScale = 1;
+        OGRoot.GetInstance().GoToPage ( "Game" );
+        TrackedGhost=null;
+    }
+    public void setGhost(GhostScript go){
+        TrackedGhost=go;
+    }
 	//Getter for singleton, handles singleton creation if non existant
 	public static GameManager Instance
 	{
